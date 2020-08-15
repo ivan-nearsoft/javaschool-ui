@@ -1,15 +1,15 @@
 const config = {
-    "host": "",
-    "port": "",
+    "host": "http://localhost",
+    "port": "8080",
     "rest" : {
-        "size" : "",
-        "type" : "",
-        "time" : "",
-        "transport" : "",
-        "city" : "",
-        "cityPath": "",
-        "checkPrice" : "",
-        "sendShipping": "",
-        "shippingInformation": ""
+        "size" : "/size/",
+        "type" : "/type",
+        "time" : "/time",
+        "transport" : "/transport",
+        "city" : "/city",
+        "cityPath": "/cityPath",
+        "checkPrice" : "/checkPrice",
+        "sendShipping": "/sendShipping",
+        "shippingInformation": "/shippingInformation"
     }
 };
