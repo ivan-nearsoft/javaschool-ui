@@ -34,6 +34,10 @@ function createOption(value){
     });
 }
 
+function _isOptionValueValid(optionValue) {
+    return optionValue !== 'empty'
+}
+
 function fillShippingTable(shippingInformation){
     $("#shippingTable tbody").append(function(){
         return $('<tr>', {}).append(function(){

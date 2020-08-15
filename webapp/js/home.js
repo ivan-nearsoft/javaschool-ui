@@ -52,7 +52,12 @@ $(document).ready(function(){
     }
 
     function _fillSizeSelect() {
-        rest('GET', config.rest.size, _sizes);
+        let typeSelected = $('#typeSelect option:selected').val();
+        if (!_isOptionValueValid(typeSelected)) {
+            alert({"responseText": "You need to select a valid type"});
+            return;
+        }
+        rest('GET', config.rest.size + typeSelected, _sizes);
     }
 
     function _times(times){
