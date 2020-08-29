@@ -40,10 +40,6 @@ function _sendShipping(){
     let transportOptionSelected = $('#transportSelect option:selected').val();
     let shippingPrice = $('#price').val();
     let cityPath = $('#cityPath').val();
-    if(cityPath !== 'empty'){
-        alert({"responseText": "The origin and destination must be different"});
-        return;
-    }
     if(!_areOptionValuesValid(sizeOptionSelected, typeOptionSelected, timeOptionSelected, transportOptionSelected)){
         alert({"responseText":"You need to select a valid size, type, time or transport"});
         return;
