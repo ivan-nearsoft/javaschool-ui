@@ -76,11 +76,6 @@ $(document).ready(function () {
         let isOriginValid = originSelected !== 'empty';
         let isDestinationValid = destinationSelected !== 'empty';
         let areOptionsValid = isOriginValid && isDestinationValid;
-        let isSameCity = originSelected === destinationSelected;
-        if(areOptionsValid && isSameCity){
-            alert({"responseText": "The origin and destination must be different"});
-            return;
-        }
         if (areOptionsValid) {
             rest('POST', config.rest.cityPath, _cityPath, {
                 origin: originSelected,
