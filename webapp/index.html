@@ -7,133 +7,161 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
-        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet"
+          href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+          integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+          crossorigin="anonymous">
     <link rel="stylesheet" href="css/home.css">
     <link rel="icon" href="https://nearsoft.com/wp-content/themes/Peach/_img/icons/favicon.png">
 </head>
 
 <body>
-    <input style="display: none;" id="price">
-    <input style="display: none;" id="cityPath">
-    <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
-        <a class="navbar-brand" href="#">
-            <img src="https://cdn.nearsoft.com/uploads/2018/09/nearsoft-aic1.svg" width="100" height="30" class="d-inline-block align-top" alt="">
-            &nbsp; Java School
-        </a>
-    </nav>
-    <div class="jumbotron">
-        <div class="container">
-            <div class="row">
-                <div class="col">
-                    <h1 class="display-3">Shipping Application</h1>
-                </div>
+<nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
+    <a class="navbar-brand" href="#">
+        <img src="https://cdn.nearsoft.com/uploads/2018/09/nearsoft-aic1.svg" width="100"
+             height="30" class="d-inline-block align-top" alt="">
+        &nbsp; Java School
+    </a>
+</nav>
+<div class="jumbotron">
+    <div class="container">
+        <div class="row">
+            <div class="col">
+                <h1 class="display-3">Shipping Application</h1>
             </div>
-            <div class="row">
-                <div class="col">
-                    <p class="lead">Please fill information for the shipping</p>
-                </div>
+        </div>
+        <div class="row">
+            <div class="col">
+                <p class="lead">Please fill information for the shipping</p>
             </div>
-            <hr class="my-2">
-            <div class="row">
-                <div class="col col-lg-3">
-                    Origin
-                </div>
-                <div class="col col-lg-9">
-                    <select id="originSelect" class="custom-select custom-select-sm city-select">
-                        <option value="empty" selected>Origin</option>
-                    </select>
-                </div>
+        </div>
+        <hr class="my-2">
+        <div class="row">
+            <div class="col col-lg-3">
+                Origin
             </div>
-            <p></p>
-            <div class="row">
-                <div class="col col-lg-3">
-                    Destination
-                </div>
-                <div class="col col-lg-9">
-                    <select id="destinationSelect" class="custom-select custom-select-sm city-select">
-                        <option value="empty" selected>Destination</option>
-                    </select>
-                </div>
+            <div class="col col-lg-9">
+                <select id="originSelect" class="custom-select custom-select-sm city-select">
+                    <option value="empty" selected>Origin</option>
+                </select>
             </div>
-            <p></p>
-            <div class="row">
-                <div class="col col-lg-1">
-                    Type
-                </div>
-                <div class="col col-lg-2">
-                    <select class="custom-select custom-select-sm" id="typeSelect">
-                        <option value="empty" selected>Type</option>
-                    </select>
-                </div>
-                <div class="col col-lg-1">
-                    Size
-                </div>
-                <div class="col col-lg-2">
-                    <select class="custom-select custom-select-sm" id="sizeSelect">
-                        <option value="empty" selected>Size</option>
-                    </select>
-                </div>
-                <div class="col col-lg-1">
-                    Transport
-                </div>
-                <div class="col col-lg-2">
-                    <select class="custom-select custom-select-sm" id="transportSelect">
-                        <option value="empty" selected>By</option>
-                    </select>
-                </div>
-                <div class="col col-lg-1">
-                    Time
-                </div>
-                <div class="col col-lg-2">
-                    <select class="custom-select custom-select-sm" id="timeSelect">
-                        <option value="empty" selected>Time</option>
-                    </select>
-                </div>
+        </div>
+        <p></p>
+        <div class="row">
+            <div class="col col-lg-3">
+                Destination
             </div>
-            <p></p>
-            <div class="row text-right">
-                <div class="col">
-                    <button type="button" class="btn btn-secondary" id="checkPriceButton">Check Price</button>
-                    <button type="button" class="btn btn-primary" id="sendShippingButton">Send</button>
-                </div>
+            <div class="col col-lg-9">
+                <select id="destinationSelect" class="custom-select custom-select-sm city-select">
+                    <option value="empty" selected>Destination</option>
+                </select>
             </div>
-            <p></p>
-            <div class="row">
-                <div id="alertDiv" class="col">
-                </div>
+        </div>
+        <p></p>
+        <div class="row">
+            <div class="col col-lg-1">
+                Type
             </div>
-            <p></p>
-            <div class="row">
-                <div class="col">
-                    <table class="table table-hover table-bordered table-sm" id="shippingTable">
-                        <thead>
-                            <tr>
-                                <th scope="col">Folio</th>
-                                <th scope="col">Path</th>
-                                <th scope="col">Price</th>
-                            </tr>
-                        </thead>
-                        <tbody></tbody>
-                    </table>    
-                </div>
+            <div class="col col-lg-2">
+                <select class="custom-select custom-select-sm" id="typeSelect">
+                    <option value="empty" selected>Type</option>
+                </select>
+            </div>
+            <div class="col col-lg-1">
+                Size
+            </div>
+            <div class="col col-lg-2">
+                <select class="custom-select custom-select-sm" id="sizeSelect">
+                    <option value="empty" selected>Size</option>
+                </select>
+            </div>
+            <div class="col col-lg-1">
+                Transport
+            </div>
+            <div class="col col-lg-2">
+                <select class="custom-select custom-select-sm" id="transportSelect">
+                    <option value="empty" selected>By</option>
+                </select>
+            </div>
+            <div class="col col-lg-1">
+                Time
+            </div>
+            <div class="col col-lg-2">
+                <select class="custom-select custom-select-sm" id="timeSelect">
+                    <option value="empty" selected>Time</option>
+                </select>
+            </div>
+        </div>
+        <p></p>
+        <div class="row text-right">
+            <div class="col">
+                <button type="button" class="btn btn-secondary" id="checkPriceButton">Check Price
+                </button>
+                <button type="button" class="btn btn-primary" id="sendShippingButton">Send</button>
+            </div>
+        </div>
+        <p></p>
+        <div class="row">
+            <div id="alertDiv" class="col">
+            </div>
+        </div>
+        <p></p>
+        <div class="row">
+            <div class="col">
+                <p class="lead">Current shipping information</p>
+            </div>
+        </div>
+        <hr class="my-2">
+        <div id="pathInformation" class="row">
+            <div class="col col-lg-1">
+                Path
+            </div>
+            <div class="col col-lg-2" id="newPath">
+                <input disabled="true" id="cityPath">
+            </div>
+        </div>
+        <p></p>
+        <div id="priceInformation" class="row">
+            <div class="col col-lg-1">
+                Price
+            </div>
+            <div class="col col-lg-2" id="newPrice">
+                <input disabled="true" id="price">
+            </div>
+        </div>
+        <p></p>
+        <div class="row">
+            <div class="col">
+                <table class="table table-hover table-bordered table-sm" id="shippingTable">
+                    <thead>
+                    <tr>
+                        <th scope="col">Folio</th>
+                        <th scope="col">Path</th>
+                        <th scope="col">Price</th>
+                    </tr>
+                    </thead>
+                    <tbody></tbody>
+                </table>
             </div>
         </div>
     </div>
-    <!-- Optional JavaScript -->
-    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-    <script src="https://code.jquery.com/jquery-3.3.1.min.js">
-    </script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
-        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous">
-    </script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
-        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous">
-    </script>
-    <script src="js/config.js"></script>
-    <script src="js/util.js"></script>
-    <script src="js/home.js"></script>
-    <script src="js/buttons.js"></script>
+</div>
+<!-- Optional JavaScript -->
+<!-- jQuery first, then Popper.js, then Bootstrap JS -->
+<script src="https://code.jquery.com/jquery-3.3.1.min.js">
+</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        crossorigin="anonymous">
+</script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous">
+</script>
+<script src="js/config.js"></script>
+<script src="js/util.js"></script>
+<script src="js/home.js"></script>
+<script src="js/buttons.js"></script>
 </body>
 
 </html>
