@@ -1,17 +1,26 @@
-.jumbotron input {
-    width: inherit
-}
-
 body {
     padding-top: 55px;
+    background-color: #e9ecef;
+}
+
+span {
+    color: #ffffffff;
+}
+
+textarea {
+    width: 550px;
+}
+
+.btn-primary, .btn-secondary {
+    background-color: #311b92 !important;
+}
+
+.jumbotron input {
+    width: inherit
 }
 
 .table-bordered td,
 .table-bordered th,
 .table thead th {
     border: 2px solid white;
-}
-
-textarea {
-    width: 550px;
 }
