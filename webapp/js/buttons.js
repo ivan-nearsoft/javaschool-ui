@@ -44,6 +44,7 @@ function _sendShipping(){
         alert({"responseText":"You need to select a valid size, type, time or transport"});
         return;
     }
+    $("#sendShippingButton").prop( "disabled", true );
     let shippingPayload = {
         "size":sizeOptionSelected,
         "type":typeOptionSelected,
